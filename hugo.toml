@@ -1,0 +1,58 @@
+baseURL = "https://laither.com/"
+languageCode = "zh-cn"
+title = "Laither 叠时"
+theme = "hello-friend-ng"
+defaultContentLanguage = "zh-cn"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  dateform = "2006-01-02"
+  description = "王磊的个人工作室 · 软件开发 · 技术笔记 · 产品作品"
+  homeSubtitle = "全栈工程师 · 个人产品 · 技术沉淀"
+  showMenuItems = 4
+
+  [params.author]
+    name = "王磊"
+
+  [params.logo]
+    logoText = "Laither"
+    logoHomeLink = "/"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "博客"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "works"
+  name = "作品"
+  url = "/works/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 40
