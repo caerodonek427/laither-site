@@ -1,0 +1,76 @@
+<div class="landing-faq">
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">和东方财富 / 同花顺的选股器有什么区别?</div>
+    <div class="landing-faq-a">
+      东财和同花顺是把指标堆在一个界面让你自己看。stock_quant 是把我个人的判断逻辑固化 —— "均线多头 + 放量 + 行业不过热" 这种组合条件,跑一遍自动筛。你可以理解为"可编程的选股器"。核心优势不是指标多,是**可复现、可回测、可记录复盘笔记**。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">付费 ¥38 / 月,能赚回来吗?</div>
+    <div class="landing-faq-a">
+      不承诺。stock_quant 不卖信号、不荐股,给的是**系统化复盘工具**。
+      一个真正愿意每天花 20 分钟看自选股的散户,用得上;
+      想买完就涨的,用不上。
+      建议先用免费版跑 2-3 个月,觉得"离不开了" 再付费。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">数据从哪来,准确吗?</div>
+    <div class="landing-faq-a">
+      数据来自 akshare (开源 A 股库),和东财/新浪公开数据同源。日线精度到天 ·
+      盘中实时数据走新浪接口 (有延迟约 15 秒)。不用任何收费接口,
+      所以也不用为"数据费"多付。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">为什么不开源代码?</div>
+    <div class="landing-faq-a">
+      我做过开源项目 (博客有记录),stock_quant 不开源的理由有二:
+      <br>1. 信号规则本身是核心差异化,开源等于把护城河一次性送完;
+      <br>2. 需要配套自动化(schtask、数据拉取、通知推送),
+      开源后每个用户自己搭维护成本过高,不如订阅我托管的版本。
+      <br>但技术博客 <a href="/posts/">/posts/</a> 会持续公开核心方法论。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">我的持仓 / 自选股能导入吗?</div>
+    <div class="landing-faq-a">
+      支持东财 "我的自选" 导出格式 (5 组 × 190 只) 直接上传。
+      持仓 CSV 格式: 代码 / 名称 / 数量 / 成本 · 4 列就够。
+      不支持直接读券商 App (那会要求券商 API 授权,Phase 2 之后再说)。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">是不是卖信号的 / 做交易信号群?</div>
+    <div class="landing-faq-a">
+      不是。**明确不做**以下几件事:
+      <br>· 不推票 · 不群发买卖点位 · 不做付费内参群 · 不搞"一起跟车"
+      <br>stock_quant 给的是**你自己可复现的工具**,决策权始终在你。
+      如果你想要"让别人告诉我买什么",这不适合你。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">支持 iOS / Android 吗?</div>
+    <div class="landing-faq-a">
+      目前 Web 端 (Streamlit)。iOS App 在 2026 Q4 启动,Flutter MVP · 核心页面接同一套 API。
+      Android 版暂不做 (iOS 先试水)。
+    </div>
+  </div>
+
+  <div class="landing-faq-item">
+    <div class="landing-faq-q">数据隐私怎么保证?</div>
+    <div class="landing-faq-a">
+      免费版:仅记录注册邮箱,不收集其他个人信息。
+      Pro 版:自选股 / 持仓 / 灵感规则存在 Laither 自有服务器 (国内,非公有云),
+      不对接任何广告 / 推荐系统。注销账号 24 小时内删除所有数据。
+    </div>
+  </div>
+
+</div>
