@@ -3,12 +3,6 @@ title = "Laither 叠时"
 theme = "hello-friend-ng"
 defaultContentLanguage = "zh-cn"
 
-[languages]
-  [languages.zh-cn]
-    locale = "zh-cn"
-    label = "简体中文"
-    weight = 1
-
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
@@ -27,11 +21,9 @@ enableEmoji = true
 
 [params]
   dateform = "2006-01-02"
-  description = "王磊的个人工作室 · 软件开发 · 技术笔记 · 产品作品"
-  homeSubtitle = "全栈工程师 · 个人产品 · 技术沉淀"
   showMenuItems = 4
-  keywords = "Laither,王磊,个人博客,全栈工程师,Hugo,技术笔记"
   themeColor = "#1a1a1a"
+  EnableGlobalLanguageMenu = true
 
   [params.author]
     name = "王磊"
@@ -44,26 +36,74 @@ enableEmoji = true
     mask = "#87ff1f"
     msapplication = "#1a1a1a"
 
-[[menu.main]]
-  identifier = "posts"
-  name = "博客"
-  url = "/posts/"
-  weight = 10
+# ---- zh-cn (default) ----
+[languages.zh-cn]
+  locale = "zh-cn"
+  label = "中文"
+  weight = 1
+  title = "Laither 叠时"
 
-[[menu.main]]
-  identifier = "works"
-  name = "作品"
-  url = "/works/"
-  weight = 20
+  [languages.zh-cn.params]
+    description = "王磊的个人工作室 · 软件开发 · 技术笔记 · 产品作品"
+    homeSubtitle = "全栈工程师 · 个人产品 · 技术沉淀"
+    keywords = "Laither,王磊,个人博客,全栈工程师,Hugo,技术笔记"
 
-[[menu.main]]
-  identifier = "about"
-  name = "关于"
-  url = "/about/"
-  weight = 30
+  [[languages.zh-cn.menu.main]]
+    identifier = "posts"
+    name = "博客"
+    url = "/posts/"
+    weight = 10
 
-[[menu.main]]
-  identifier = "tags"
-  name = "标签"
-  url = "/tags/"
-  weight = 40
+  [[languages.zh-cn.menu.main]]
+    identifier = "works"
+    name = "作品"
+    url = "/works/"
+    weight = 20
+
+  [[languages.zh-cn.menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 30
+
+  [[languages.zh-cn.menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 40
+
+# ---- en ----
+[languages.en]
+  locale = "en-us"
+  label = "English"
+  weight = 2
+  title = "Laither"
+
+  [languages.en.params]
+    description = "Lei Wang's studio · Software engineering · Technical notes · Indie products"
+    homeSubtitle = "Full-stack engineer · Indie products · Engineering notes"
+    keywords = "Laither,Lei Wang,personal blog,full-stack engineer,Hugo,engineering notes"
+
+  [[languages.en.menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/en/posts/"
+    weight = 10
+
+  [[languages.en.menu.main]]
+    identifier = "works"
+    name = "Works"
+    url = "/en/works/"
+    weight = 20
+
+  [[languages.en.menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/en/about/"
+    weight = 30
+
+  [[languages.en.menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/en/tags/"
+    weight = 40
