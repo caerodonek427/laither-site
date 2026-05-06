@@ -77,9 +77,24 @@ export async function onRequestPost({ request, env }) {
 
   if (!resp.ok) {
     const errText = await resp.text().catch(() => "");
-    console.log("resend failed", resp.status, errText.slice(0, 500));
+    // Structured log goes to CF Pages > Functions > Real-time logs.
+    console.log(JSON.stringify({
+      tag: "subscribe.resend_fail",
+      status: resp.status,
+      error: errText.slice(0, 500),
+      email,
+      source,
+      from: notifyFrom,
+      to:   notifyTo,
+    }));
     return redirect(request, "/subscribe-error/?reason=send");
   }
+
+  console.log(JSON.stringify({
+    tag: "subscribe.ok",
+    email,
+    source,
+  }));
 
   return redirect(request, "/thanks/");
 }
