@@ -1,8 +1,13 @@
 baseURL = "https://laither.com/"
-languageCode = "zh-cn"
 title = "Laither 叠时"
 theme = "hello-friend-ng"
 defaultContentLanguage = "zh-cn"
+
+[languages]
+  [languages.zh-cn]
+    locale = "zh-cn"
+    label = "简体中文"
+    weight = 1
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -25,6 +30,8 @@ enableEmoji = true
   description = "王磊的个人工作室 · 软件开发 · 技术笔记 · 产品作品"
   homeSubtitle = "全栈工程师 · 个人产品 · 技术沉淀"
   showMenuItems = 4
+  keywords = "Laither,王磊,个人博客,全栈工程师,Hugo,技术笔记"
+  themeColor = "#1a1a1a"
 
   [params.author]
     name = "王磊"
@@ -32,6 +39,10 @@ enableEmoji = true
   [params.logo]
     logoText = "Laither"
     logoHomeLink = "/"
+
+  [params.favicon]
+    mask = "#87ff1f"
+    msapplication = "#1a1a1a"
 
 [[menu.main]]
   identifier = "posts"
