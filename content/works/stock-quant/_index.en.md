@@ -45,11 +45,18 @@ That's why stock_quant exists.
 - **Subscriber**: ¥38/month (≈$5). Full watchlist review, resonance alerts, inspiration DSL unlimited, export to CSV.
 - Launch target: June 2026.
 
-<p style="text-align:center;margin:2rem 0;">
-  <a href="mailto:stock@laither.com?subject=stock_quant%20early%20access" style="display:inline-block;background:#FF8700;color:#fff;padding:0.8rem 2rem;border-radius:6px;text-decoration:none;font-weight:600;">Get early access (email me)</a>
-</p>
-
-<p style="text-align:center;font-size:0.85rem;opacity:0.7;">Email <code>stock@laither.com</code> · get the first-batch launch notice and a beta invite.</p>
+<form action="/api/subscribe" method="post" style="margin:2rem auto;max-width:480px;">
+  <input type="hidden" name="source" value="stock-quant-en-top">
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+    <input type="email" name="email" required placeholder="you@example.com"
+           style="flex:1;min-width:220px;padding:0.65rem 0.9rem;border-radius:6px;border:1px solid rgba(128,128,128,0.4);background:rgba(255,255,255,0.04);color:inherit;font-size:1rem;">
+    <button type="submit"
+            style="background:#FF8700;color:#fff;padding:0.65rem 1.4rem;border-radius:6px;border:none;font-weight:600;cursor:pointer;font-size:1rem;">
+      Request beta invite
+    </button>
+  </div>
+  <p style="text-align:center;font-size:0.85rem;opacity:0.7;margin-top:0.8rem;">First-batch launch notice + beta invite, one email, no list sharing.</p>
+</form>
 
 ---
 
@@ -96,7 +103,16 @@ stock_quant is not the first thing I've built, but probably the first I'm taking
 
 Contact: [Laither home](/en/) · [Blog](/en/posts/) · [Other works](/en/works/)
 
-<p style="text-align:center;margin-top:3rem;padding:1.5rem;background:rgba(255,135,0,0.05);border:1px dashed #FF8700;border-radius:8px;">
-  <strong>Still curious?</strong> <a href="mailto:stock@laither.com?subject=stock_quant%20early%20access">Email me</a> and I'll send a beta invite when the June launch happens.<br>
-  <span style="font-size:0.85rem;opacity:0.75;">Or follow <a href="/en/">Laither home</a> for updates.</span>
-</p>
+<form action="/api/subscribe" method="post" style="margin:3rem auto 0;padding:1.5rem;background:rgba(255,135,0,0.05);border:1px dashed #FF8700;border-radius:8px;max-width:520px;">
+  <input type="hidden" name="source" value="stock-quant-en-bottom">
+  <p style="margin:0 0 1rem;"><strong>Still curious?</strong> Drop your email and I'll send the beta invite when the June launch ships.</p>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+    <input type="email" name="email" required placeholder="you@example.com"
+           style="flex:1;min-width:220px;padding:0.6rem 0.85rem;border-radius:6px;border:1px solid rgba(128,128,128,0.4);background:rgba(255,255,255,0.05);color:inherit;">
+    <button type="submit"
+            style="background:#FF8700;color:#fff;padding:0.6rem 1.3rem;border-radius:6px;border:none;font-weight:600;cursor:pointer;">
+      Notify me
+    </button>
+  </div>
+  <p style="margin:0.8rem 0 0;font-size:0.82rem;opacity:0.75;">Or follow <a href="/en/">Laither home</a> for updates.</p>
+</form>

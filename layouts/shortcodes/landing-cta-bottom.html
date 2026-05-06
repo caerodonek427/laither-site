@@ -3,9 +3,16 @@
     看到这里说明你大概感兴趣
   </div>
 
-  <a href="mailto:stock@laither.com?subject=stock_quant%20内测申请" class="landing-cta-button">
-    📮 我要参加内测
-  </a>
+  <form action="/api/subscribe" method="post" style="margin:0 auto 1rem;max-width:480px;">
+    <input type="hidden" name="source" value="stock-quant-zh-bottom">
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+      <input type="email" name="email" required placeholder="你的邮箱"
+             style="flex:1;min-width:200px;padding:0.6rem 0.85rem;border-radius:6px;border:1px solid rgba(128,128,128,0.4);background:rgba(255,255,255,0.05);color:inherit;font-size:1rem;">
+      <button type="submit" class="landing-cta-button" style="margin:0;">
+        📮 我要参加内测
+      </button>
+    </div>
+  </form>
 
   <a href="/works/" class="landing-cta-button secondary">
     🔍 看其他作品

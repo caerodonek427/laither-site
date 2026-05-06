@@ -3,19 +3,25 @@
     🎯 2026 Q3 开放内测
   </div>
   <div style="font-size: 0.95rem; margin-bottom: 1rem; opacity: 0.85;">
-    系统已本地运行 6 个月,公网版部署中。留个邮箱 / 微信,开放时第一时间通知。
+    系统已本地运行 6 个月,公网版部署中。留个邮箱,开放时第一时间通知。
   </div>
 
-  <a href="mailto:stock@laither.com?subject=stock_quant%20内测申请&body=说说你目前怎么做复盘的,我就大概知道适不适合你。" class="landing-cta-button">
-    📮 发邮件申请内测
-  </a>
+  <form action="/api/subscribe" method="post" style="margin:1rem auto 0;max-width:480px;">
+    <input type="hidden" name="source" value="stock-quant-zh-top">
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+      <input type="email" name="email" required placeholder="你的邮箱"
+             style="flex:1;min-width:200px;padding:0.6rem 0.85rem;border-radius:6px;border:1px solid rgba(128,128,128,0.4);background:rgba(255,255,255,0.05);color:inherit;font-size:1rem;">
+      <button type="submit" class="landing-cta-button" style="margin:0;">
+        📮 申请内测
+      </button>
+    </div>
+  </form>
 
   <a href="/posts/" class="landing-cta-button secondary">
     📖 先看技术博客
   </a>
 
   <div class="landing-cta-note">
-    邮箱地址 <code>stock@laither.com</code> · 一般 24 小时内回。
-    或者扫码加微信 (建设中,近期补齐)。
+    也可以直接邮 <code>hi@laither.com</code> · 一般 24 小时内回。
   </div>
 </div>
