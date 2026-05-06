@@ -7,11 +7,11 @@
 // Env vars (set in Cloudflare Pages → Settings → Environment variables):
 //   RESEND_API_KEY   — re_xxxxxxxxxxxx (secret, production only)
 //   NOTIFY_TO        — hi@laither.com (fallback default below)
-//   NOTIFY_FROM      — Laither <noreply@send.laither.com> (fallback default)
+//   NOTIFY_FROM      — Laither <noreply@laither.com> (fallback default)
 
 export async function onRequestPost({ request, env }) {
   const notifyTo   = env.NOTIFY_TO   || "hi@laither.com";
-  const notifyFrom = env.NOTIFY_FROM || "Laither <noreply@send.laither.com>";
+  const notifyFrom = env.NOTIFY_FROM || "Laither <noreply@laither.com>";
 
   let email = "", source = "", message = "", ua = "", ip = "";
 
