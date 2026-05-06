@@ -4,3 +4,6 @@ resources/
 .DS_Store
 *.log
 node_modules/
+data/stock.sqlite
+data/*.sqlite
+data/*.sqlite-*
