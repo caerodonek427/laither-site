@@ -2,7 +2,7 @@
 title: "Win7 上下载 Win10 ISO 的 2 个微妙陷阱"
 date: 2026-05-05T11:30:00+08:00
 tags: ["Windows", "TLS", "浏览器", "踩坑"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "Win7 默认不启 TLS 1.2 导致 Media Creation Tool 挂,微软下载页又按 User-Agent 决定给你 MCT 还是 ISO。两个坑串起来让在 Win7 上下 Win10 ISO 变成一件反直觉的事。"
 ---

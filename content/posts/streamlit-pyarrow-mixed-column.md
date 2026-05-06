@@ -2,7 +2,7 @@
 title: "Streamlit 转置表 pyarrow 报错 · 混合类型列的隐蔽坑"
 date: 2026-05-05T11:00:00+08:00
 tags: ["Streamlit", "pandas", "pyarrow", "踩坑"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "Streamlit 的 st.dataframe 对混合类型列做 Arrow 转换时会报 ArrowInvalid,但 UI fallback 不崩,所以一开始察觉不到。转置 DataFrame 后一定会踩,修法是展示前 `.astype(str)` 兜底。"
 ---

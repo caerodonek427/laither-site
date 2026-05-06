@@ -9,6 +9,11 @@ PygmentsStyle = "monokai"
 enableRobotsTXT = true
 enableEmoji = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [pagination]
   pagerSize = 10
 

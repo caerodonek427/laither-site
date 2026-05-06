@@ -2,7 +2,7 @@
 title: "Windows 11 + 中文用户目录下写自动化脚本的 7 个坑"
 date: 2026-04-20
 tags: ["Windows", "PowerShell", "schtasks", "踩坑", "中文路径"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "PowerShell 默认 GBK、schtasks 嵌套引号吞字、wmic 已移除、中文 locale 下 %date% 带星期几、claude -p 没有 --no-interactive——写 Windows 自动化前先过这 7 条。"
 ---

@@ -2,7 +2,7 @@
 title: "Windows 计划任务吞掉中文用户名 · 绕开 shim 的 %~dp0"
 date: 2026-05-05T07:00:00+08:00
 tags: ["Windows", "schtasks", "cmd", "编码", "踩坑"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "schtask 自动触发 cmd 脚本,%~dp0 在中文用户名环境下偶发把汉字吞掉,拼出的路径变成 'C:\\Users\\\\AppData\\...'。绕开 npm shim 自己拼绝对路径稳。"
 ---

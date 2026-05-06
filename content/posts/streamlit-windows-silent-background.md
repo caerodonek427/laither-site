@@ -2,7 +2,7 @@
 title: "Streamlit 在 Windows 静默后台运行的 7 次失败和终极方案"
 date: 2026-05-02
 tags: ["Windows", "Streamlit", "VBS", "后台服务", "踩坑"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "Git Bash &、cmd start /b、schtasks、UTF-8 VBS ...6 种方案全挂,最后靠用户双击纯 ASCII VBS 才稳。父进程是 explorer.exe 是唯一解。"
 ---

@@ -2,7 +2,7 @@
 title: "踩了两天的 Windows bat 行尾坑 · schtasks 返回 255 全无日志"
 date: 2026-04-22
 tags: ["Windows", "bat", "schtasks", "踩坑"]
-categories: ["技术"]
+categories: ["踩坑笔记"]
 draft: false
 summary: "Git Bash 写出的 LF 行尾 bat 在 cmd.exe 下被当成一行超长命令,schtasks LastResult=255 不产生任何日志,手动 cmd 跑立刻暴露。"
 ---

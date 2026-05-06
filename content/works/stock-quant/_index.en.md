@@ -45,6 +45,12 @@ That's why stock_quant exists.
 - **Subscriber**: ¥38/month (≈$5). Full watchlist review, resonance alerts, inspiration DSL unlimited, export to CSV.
 - Launch target: June 2026.
 
+<p style="text-align:center;margin:2rem 0;">
+  <a href="mailto:stock@laither.com?subject=stock_quant%20early%20access" style="display:inline-block;background:#FF8700;color:#fff;padding:0.8rem 2rem;border-radius:6px;text-decoration:none;font-weight:600;">Get early access (email me)</a>
+</p>
+
+<p style="text-align:center;font-size:0.85rem;opacity:0.7;">Email <code>stock@laither.com</code> · get the first-batch launch notice and a beta invite.</p>
+
 ---
 
 ## A real example
@@ -89,3 +95,8 @@ Indie developer. Day job: Android systems engineer. Nights: Python tooling for t
 stock_quant is not the first thing I've built, but probably the first I'm taking seriously enough to ship to other people.
 
 Contact: [Laither home](/en/) · [Blog](/en/posts/) · [Other works](/en/works/)
+
+<p style="text-align:center;margin-top:3rem;padding:1.5rem;background:rgba(255,135,0,0.05);border:1px dashed #FF8700;border-radius:8px;">
+  <strong>Still curious?</strong> <a href="mailto:stock@laither.com?subject=stock_quant%20early%20access">Email me</a> and I'll send a beta invite when the June launch happens.<br>
+  <span style="font-size:0.85rem;opacity:0.75;">Or follow <a href="/en/">Laither home</a> for updates.</span>
+</p>

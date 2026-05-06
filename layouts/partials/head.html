@@ -5,11 +5,43 @@
 {{ end }}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ range .Site.Params.Author }}{{ . }} {{ end }}{{ end }}">
-<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ if .Params.Description }}{{ .Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}{{ end }}" />
+{{/* description 三级回退: Params.Description > Params.Summary > homeSubtitle (首页) > site.description */}}
+{{- $desc := "" -}}
+{{- if .IsHome -}}
+    {{- $desc = .Site.Params.homeSubtitle | default .Site.Params.description -}}
+{{- else -}}
+    {{- $desc = .Params.Description | default .Params.Summary | default (.Summary | plainify) -}}
+{{- end -}}
+{{- $desc = $desc | plainify | chomp -}}
+
+{{/* OG image (可被页面级 Params.ogImage 覆盖) */}}
+{{- $ogImage := .Params.ogImage | default (printf "%sog-image.png" .Site.BaseURL) -}}
+
+<meta name="description" content="{{ $desc }}" />
 <meta name="keywords" content="{{ .Site.Params.keywords }}{{ if .Params.tags }}{{ range .Params.tags }}, {{ . }}{{ end }}{{ end }}" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description" content="{{ $desc }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="{{ replace .Site.Language.Lang "-" "_" }}" />
+{{- range .Translations }}
+<meta property="og:locale:alternate" content="{{ replace .Language.Lang "-" "_" }}" />
+{{- end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+<meta name="twitter:image" content="{{ $ogImage }}" />
 
 {{ block "title" . }}
     <title>
@@ -39,11 +71,7 @@
 {{- partial "favicons.html" . }}
 
 {{ template "_internal/schema.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
-
-{{ if isset .Site.Taxonomies "series" }}
-    {{ template "_internal/opengraph.html" . }}
-{{ end }}
+{{/* twitter_cards / opengraph 内部模板已被上面自定义 OG/Twitter 块取代,避免重复输出 */}}
 
 {{ range .Params.categories }}
     <meta property="article:section" content="{{ . }}" />
