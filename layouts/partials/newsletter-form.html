@@ -1,0 +1,30 @@
+{{- $isEn := eq .Site.Language.Lang "en" -}}
+{{- $source := printf "newsletter-%s" .Site.Language.Lang -}}
+
+<section class="newsletter-section">
+  <div class="newsletter-card">
+    <h3 class="newsletter-title">
+      {{- if $isEn -}}
+        Get Laither updates in your inbox
+      {{- else -}}
+        订阅 Laither
+      {{- end -}}
+    </h3>
+    <p class="newsletter-desc">
+      {{- if $isEn -}}
+        Product launch notices, technical notes, and major updates. Written by me, no outsourcing, unsubscribe one click.
+      {{- else -}}
+        产品发布通知、重要技术笔记、作品更新。我自己写、自己发,一键退订。
+      {{- end -}}
+    </p>
+    <form action="/api/newsletter-subscribe" method="post" class="newsletter-form">
+      <input type="hidden" name="source" value="{{ $source }}">
+      <input type="email" name="email" required
+             placeholder="{{ if $isEn }}you@example.com{{ else }}你的邮箱{{ end }}"
+             class="newsletter-input">
+      <button type="submit" class="newsletter-button">
+        {{- if $isEn }}Subscribe{{ else }}订阅{{ end -}}
+      </button>
+    </form>
+  </div>
+</section>
