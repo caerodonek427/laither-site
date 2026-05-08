@@ -20,13 +20,14 @@ A stock-picking and portfolio-review system for individual investors.
 
 See the [landing page](/en/works/stock-quant/) for details.
 
-### math_exam_coach · K-12 contest prep
+### math_exam_coach · Kids' contest prep
 
-Math / English contest training for parents (internal beta).
+Math / English contest training, built for my own kid (not a commercial product).
 
-- Status: 12 Streamlit pages, three subjects, 54 problem-solving cards, in active use by my own kid
+- Status: 12 Streamlit pages, two subjects, 54 approach cards, in active use for 3 weeks at home
 - Key features: smart grading · spaced repetition · streak badges · kid-safe mode
-- URL: `math.laither.com` (live after launch)
+- Direction: private use → eventual copy-distribution → possibly open source
+- Details: [product page](/en/works/math-exam-coach/)
 
 ## Open source
 
