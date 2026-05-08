@@ -1,0 +1,5 @@
+{{- $isEn := eq .Site.Language.Lang "en" -}}
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<div id="search" data-pagefind-ui-placeholder="{{ if $isEn }}Search...{{ else }}搜索博客...{{ end }}"></div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script defer src="/js/search-init.js"></script>

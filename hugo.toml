@@ -29,6 +29,8 @@ enableEmoji = true
   showMenuItems = 4
   themeColor = "#1a1a1a"
   EnableGlobalLanguageMenu = true
+  EnableReadingTime = true
+  dateformNumTime = "2006-01-02 15:04"
 
   [params.author]
     name = "王磊"
@@ -77,6 +79,12 @@ enableEmoji = true
     url = "/tags/"
     weight = 40
 
+  [[languages.zh-cn.menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 50
+
 # ---- en ----
 [languages.en]
   locale = "en-us"
@@ -112,3 +120,9 @@ enableEmoji = true
     name = "Tags"
     url = "/en/tags/"
     weight = 40
+
+  [[languages.en.menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/en/search/"
+    weight = 50
