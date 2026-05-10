@@ -7,3 +7,6 @@ node_modules/
 data/stock.sqlite
 data/*.sqlite
 data/*.sqlite-*
+
+# local workflow notes
+DRAFT_URLS.md
